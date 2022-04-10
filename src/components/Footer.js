@@ -17,9 +17,9 @@ class Footer extends React.Component {
       minWidth: 200.00,
       width:1400,
       highlightColor: 0xffffe9,
-  midtoneColor: 0xffbce7,
-  lowlightColor: 0xbc8fff,
-  baseColor: 0xf6e6ff,
+      midtoneColor: 0xffbce7,
+      lowlightColor: 0xbc8fff,
+      baseColor: 0xf6e6ff,
       blurFactor: 0.7,
       speed: 6,
       zoom:0.2

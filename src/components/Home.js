@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { Tab, Nav, Row, Col, Container } from 'react-bootstrap'
 import ProjectItem from './ProjectItem'
 import Footer from './Footer'
@@ -44,15 +44,15 @@ class Home extends Component {
                 <Row style={stylingObject.intro}>
                     <Col xs={4} > </Col>
                     <Col xs={8}>
-                        <p class='Runalto'>Hi, I am Jiaojiao</p>
-                        <p class='Runalto' >I am a product designer at goldman sachs new york execution roostify trading </p>
+                        <p className='Runalto'>Hi, I am Jiaojiao</p>
+                        <p className='Runalto' >I am a product designer at goldman sachs new york execution roostify trading </p>
                     </Col>
 
                 </Row>
 
                 <Row style={stylingObject.projectList}>
                     {projects.map((project) =>
-                        <Col xs={12} md={6}><ProjectItem title={project.title} description={project.description} /></Col>
+                         <Col xs={12} md={6} key = {project.title}><ProjectItem title={project.title} description={project.description} /></Col>                  
                     )}
                 </Row>
 
@@ -76,7 +76,7 @@ function mapStateToProps({ authedUser, questions, projectSummary }) {
 
 export const withRouter = (Component) => {
     const Wrapper = (props) => {
-        const history = useNavigate();
+        const history = useHistory();
 
         return (
             <Component
