@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { connect } from 'react-redux'
-import LoadingBar from 'react-redux-loading-bar'
+// import LoadingBar from 'react-redux-loading-bar'
 import { handleInitialData } from './actions/shared'
 import Home from './components/Home'
-import Nav from './components/Nav'
-import PageNotFound from './components/PageNotFound'
+// import Nav from './components/Nav'
+// import PageNotFound from './components/PageNotFound'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import './font.css'
@@ -23,7 +23,7 @@ class App extends Component {
       <Router>
 
         <Fragment>
-            <LoadingBar style={{ backgroundColor: '#426BFD' }} />     
+            
             <Home/>
         </Fragment>
       </Router>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { Card, Button, Form, Row, Col, Container } from 'react-bootstrap'
-import gradientbg from "../img/gradientbg.png"
+import { Container } from 'react-bootstrap'
+// import gradientbg from "../img/gradientbg.png"
 import 'bootstrap/dist/css/bootstrap.css'
 import '../index.css'
 
@@ -9,7 +8,7 @@ class ProjectItem extends Component{
     render(){
         const { title, description } = this.props
         return (
-            <container >
+            <Container >
                 <div style={stylingObject.cardContainer}>
                     <div style={stylingObject.cardHeader}>
                         <p>{title}</p>
@@ -25,7 +24,7 @@ class ProjectItem extends Component{
 
                 
 
-            </container>
+            </Container>
         )
     }
 }
