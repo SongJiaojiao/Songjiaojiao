@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useLayoutEffect,useState,useEffect} from 'react'
 import { connect } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { Tab, Nav, Row, Col, Container } from 'react-bootstrap'
@@ -6,12 +6,15 @@ import ProjectItem from './ProjectItem'
 import Footer from './Footer'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../index.css'
-
+import { useResizeDetector } from 'react-resize-detector'
 
 
 
 
 class Home extends Component {
+
+   
+
     divideQuestions = (authedUser, questions) => {
         const questionIds = Object.keys(questions)
         const answered = questionIds.filter(function (id) {
@@ -38,8 +41,12 @@ class Home extends Component {
     render() {
         const { authedUser, questions, projectSummary } = this.props
         const projects = Object.values(projectSummary)
+        
         return (
             <Container style={stylingObject.containerView}>
+                <ReactResizeDetector handleWidth handleHeight>
+  {({ width, height }) => <div>{`${width}x${height}`}</div>}
+</ReactResizeDetector>
 
                 <Row style={stylingObject.intro}>
                     <Col xs={4} > </Col>

@@ -1,5 +1,6 @@
 import React from 'react'
 import FOG from 'vanta/dist/vanta.fog.min'
+// import * as THREE from 'three.min.js'
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
 class Footer extends React.Component {
